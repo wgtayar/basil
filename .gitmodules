@@ -1,3 +1,3 @@
 [submodule "external/underactuated"]
 	path = external/underactuated
-	url = https://github.com/RussTedrake/underactuated.git
+	url = https://github.com/wgtayar/underactuated.git
