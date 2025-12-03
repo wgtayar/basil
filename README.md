@@ -1,1 +1,1 @@
-# Underactuated-Biped
+# Underactuated-Quadruped
