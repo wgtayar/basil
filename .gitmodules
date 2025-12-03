@@ -4,3 +4,4 @@
 [submodule "external/spot"]
 	path = external/spot
 	url = https://github.com/wgtayar/Spot_jumping_LAvila.git
+	branch = main
