@@ -21,16 +21,15 @@ All of our custom code lives in the **`external/spot`** submodule, but it depend
 ## Spot in Action (Video)
 
 <p align="center">
-  <!-- TODO: Replace with your actual video link or GitHub asset -->
-  <!-- Example using a YouTube thumbnail that links to the video -->
-  <a href="https://github.com/wgtayar/basil/Media/Spot_Underactuated_Walk.mp4">
-    <img src="https://github.com/basil/Media/spot_walk_A.png"
-         alt="Click to watch Spot running BASIL controllers" />
-  </a>
+  <video src="Media/Spot_Underactuated_Walk.mp4"
+         controls
+         loop
+         muted
+         playsinline
+         style="max-width: 100%; height: auto; border-radius: 8px;">
+    Your browser does not support the video tag.
+  </video>
 </p>
-
-<!-- If you upload an .mp4 as a GitHub asset, you can instead just paste its URL: -->
-<!-- https://github.com/USER/REPO/assets/YOUR_VIDEO_ASSET_ID -->
 
 ---
 
