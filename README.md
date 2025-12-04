@@ -20,16 +20,7 @@ All of our custom code lives in the **`external/spot`** submodule, but it depend
 
 ## Spot in Action (Video)
 
-<p align="center">
-  <video src="Media/Spot_Underactuated_Walk.mp4"
-         controls
-         loop
-         muted
-         playsinline
-         style="max-width: 100%; height: auto; border-radius: 8px;">
-    Your browser does not support the video tag.
-  </video>
-</p>
+https://github.com/user-attachments/assets/508cad55-3a63-445e-a9cf-afd057a341a1
 
 ---
 
