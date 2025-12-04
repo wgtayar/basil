@@ -160,6 +160,20 @@ git submodule status
 
 ---
 
+## Some Screenshots
+
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/ea5ef9e0-ab28-49a7-b5ee-7e5a9ec3f7ec"
+    alt="Spot Parkour demo"
+    width="48%" />
+  <img
+    src="https://github.com/user-attachments/assets/42298547-0dfb-4d22-8348-1109e0e526c1"
+    alt="Spot introductory pose"
+    width="48%" />
+</p>
+
+
 ## Notes and Best Practices
 
 - Always use `--recurse-submodules` when cloning or `git submodule update --init --recursive` after pulling.  
