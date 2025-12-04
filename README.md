@@ -56,7 +56,7 @@ git clone --recurse-submodules git@github.com:wgtayar/basil.git basil
 cd basil
 ```
 
-If you prefer a different folder name, replace the final `🌿basil🌿` argument with whatever you like.
+If you prefer a different folder name, replace the final `basil` argument with whatever you like.
 
 ---
 
@@ -76,9 +76,10 @@ This will:
 
 ---
 
-### 3. Set Up a Python Environment (Non-Docker Users) (Also we highly recommend using Docker :) )
+### 3. Set Up a Python Environment (Non-Docker Users)  
+(We still highly recommend using Docker 🙂)
 
-If you still want to run things outside Docker, we recommend:
+If you want to run things outside Docker, we recommend:
 
 ```bash
 cd basil
@@ -90,9 +91,14 @@ source .venv/bin/activate
 # Install Python dependencies (Drake plus scientific stack)
 pip install --upgrade pip
 pip install -r requirements.txt
+
+# Make the MIT Underactuated repo importable as `underactuated`
+# (we skip its own dependency installation because Drake is already handled above)
+pip install -e external/underactuated --no-deps
 ```
 
-The `requirements.txt` here is a minimal environment inspired by the official underactuated requirements, including `drake`, `numpy`, `scipy`, `matplotlib`, and a few supporting libraries.
+The `requirements.txt` here is a minimal environment inspired by the official underactuated requirements, including `drake`, `numpy`, `scipy`, `matplotlib`, and a few supporting libraries.  
+Installing `external/underactuated` in editable mode exposes the package as `underactuated`, which is required by the Spot scripts.
 
 ---
 
@@ -106,16 +112,25 @@ cd basil/external/spot
 
 From here:
 
-- If you want a Docker-based workflow (recommended!!), follow the instructions in `external/spot/README.md` (it explains how to build the `spot-sim` image and run Meshcat-based sims).
-- If you want to run locally (no Docker, not recommened!!), make sure you have installed `basil/requirements.txt`, then follow any non-Docker instructions in the `spot` README.
+- If you want a **Docker-based workflow (recommended!!)**:
+
+  ```bash
+  cd basil/external/spot
+  docker compose build spot-sim
+  docker compose run --rm --service-ports spot-sim
+  ```
+
+  This builds and runs a container that has Drake, the `underactuated` repo, and the Spot playground wired up. See `external/spot/README.md` for details on the available demos.
+
+- If you want to run locally (no Docker, not recommended!!), make sure you have installed `basil/requirements.txt` **and** `pip install -e external/underactuated --no-deps`, then follow any non-Docker instructions in the `spot` README.
 
 Examples that live in `external/spot` include:
 
 - PD standing and disturbance rejection  
 - Joint-space LQR standing  
-- Full-state LQR experiments
-- MPC Control of Spot
-- Underactuated multi-step trot playback
+- Full-state LQR experiments  
+- MPC Control of Spot  
+- Underactuated multi-step trot playback  
 
 ---
 
@@ -173,6 +188,7 @@ git submodule status
     width="48%" />
 </p>
 
+---
 
 ## Notes and Best Practices
 
@@ -184,7 +200,7 @@ git submodule status
   git submodule update --init --recursive
   ```
 
-- For reproducible non-Docker runs, use a fresh virtual environment and `pip install -r requirements.txt`.
+- For reproducible non-Docker runs, use a fresh virtual environment and `pip install -r requirements.txt` followed by `pip install -e external/underactuated --no-deps`.
 
 ---
 
