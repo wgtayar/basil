@@ -34,7 +34,7 @@ basil/
 │   ├── spot/            # Fork with all 🌿BASIL🌿 Spot controllers, sims, Docker, etc.
 │   └── underactuated/   # Fork of MIT Underactuated repo, with local modifications
 ├── requirements.txt     # Python dependencies for non-Docker usage
-└── ...                  # (optional) extra configs, scripts, notes
+└── ...
 ```
 
 Think of `🌿basil🌿` as the umbrella workspace:
